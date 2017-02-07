@@ -1,1 +1,12 @@
+@import "../_variables";
 /*styles for home content only*/
+.ds{
+    background: rgba(0,0,0,0.5)
+}
+.menu_link {
+    background: var(--blue);
+    width:var(--column);
+}
+.menu {
+    width: calc(4 * var(--column));
+}
