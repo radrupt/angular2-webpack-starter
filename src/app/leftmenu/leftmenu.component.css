@@ -30,7 +30,7 @@
     display: inline-block;
     transition:all .2s
 }
-.sidebar-title:hover,.sidebar-title.match-href,.sidebar-content>li:hover,.sidebar-content>li.match-href{
+.sidebar-title:hover,.sidebar-title.match-href,.sidebar-content>li>a:hover,.sidebar-content>li>a.match-href{
     background: var(--colorC);
 }
 .active .sidebar-title{
@@ -47,12 +47,10 @@
     overflow: hidden;
     list-style: none
 }
-.sidebar-content>li{
+.sidebar-content>li>a{
     padding-left: 38px;
     height:40px;
     line-height: 40px;
     transition: all .2s;
-}
-.sidebar-content>li>a{
     display: block;
 }

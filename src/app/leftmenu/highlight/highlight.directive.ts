@@ -6,7 +6,7 @@ import {
   Renderer,
   Input,
   OnInit,
-  AfterViewInit
+  AfterViewChecked
 } from '@angular/core';
 
 /*
@@ -15,7 +15,7 @@ import {
 @Directive({
   selector: '[highLight]' // using [ ] means selecting attributes
 })
-export class HighLightDirective implements OnInit,AfterViewInit{
+export class HighLightDirective implements OnInit,AfterViewChecked{
 
   @Input() highLightClass: string = '';//dom高亮使用到的class
   @Input() highLightHref: string = '';//匹配到该href则应用highLightClass
@@ -30,10 +30,11 @@ export class HighLightDirective implements OnInit,AfterViewInit{
   public ngOnInit(){
   }
  
-  public ngAfterViewInit(){//组件及子组件渲染结束执行
-    if(location.href.search(this.element.nativeElement.href)){
-      console.log(location.href,this.element.nativeElement.href)
+  public ngAfterViewChecked(){//组件及子组件渲染结束执行
+    if(location.href.search(this.element.nativeElement.href)>=0){
       this.renderer.setElementClass(this.element.nativeElement,this.highLightClass,true);
+    }else{
+      this.renderer.setElementClass(this.element.nativeElement,this.highLightClass,false);
     }
   }
 }

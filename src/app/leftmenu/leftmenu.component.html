@@ -10,13 +10,13 @@
             <span class="{{menu.icon}}"></span>
             <span>{{menu.title}}</span>
         </a>
-        <div class="sidebar-title" mytoggleheader *ngIf="!menu.href&&!menu.ruterLink" routerLink="{{menu.ruterLink}}" >
+        <div class="sidebar-title" mytoggleheader *ngIf="!menu.href&&!menu.ruterLink" >
             <span class="icon-ArrowLeft"></span>
             <span>{{menu.title}}</span>
         </div>
         <ul class="sidebar-content" mytogglecontent>
             <li *ngFor="let menu of menu.childs">
-                <a routerLink="{{menu.ruterLink}}" highLight highLightClass="match-href">
+                <a [routerLink]="menu.ruterLink" highLight highLightClass="match-href">
                     <span></span>
                     <span>{{menu.title}}</span>
                 </a>

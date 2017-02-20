@@ -10,8 +10,6 @@ import {
   AfterViewInit
 } from '@angular/core';
 
-import {addClass,removeClass} from '../../tool';
-
 /*
  * Directive
  */
@@ -26,6 +24,7 @@ export class MyToggleDirective implements OnInit,AfterViewInit{
   private  dom: any;
   private  headerDom:  any;
   private  contentDom: any;
+  private  activeClass:string = 'active';
 
   constructor(
     public element: ElementRef,
@@ -45,6 +44,7 @@ export class MyToggleDirective implements OnInit,AfterViewInit{
     let style = this.renderer.createElement(this.element.nativeElement,'style');
 
     let self = this;
+    //不响应点击事件
     if(this.disableclick) return;
     else{
       this.headerDom.onclick = function(){
@@ -65,11 +65,11 @@ export class MyToggleDirective implements OnInit,AfterViewInit{
     this.status = !this.status;
   }
   open(){
-    addClass(this.dom,'active');
-    this.contentDom.style.height = this.height;
+    this.renderer.setElementClass(this.dom,this.activeClass,true);
+    this.renderer.setElementStyle(this.contentDom,'height',this.height)
   }
   close(){
-    removeClass(this.dom,'active');
-    this.contentDom.style.height = '0px';
+    this.renderer.setElementClass(this.dom,this.activeClass,false);
+    this.renderer.setElementStyle(this.contentDom,'height','0px')
   }
 }
