@@ -1,0 +1,58 @@
+@import "../_variables";
+.sidebar{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    box-shadow: 0 0 10px #BDBDBD;
+    overflow-y: auto;
+    padding-bottom: 16px;
+}
+.sidebar a{
+    text-decoration: none;
+    color:var(--colorB);
+}
+.sidebar-nav{
+    width:var(--sidebarWidth);
+    color:var(--colorB);
+    border-bottom:1px solid rgba(221, 221, 221, 0.46);
+}
+.sidebar-title{
+    cursor: pointer;
+    transition: all .2s;
+    background: white;
+    height: 40px;
+    line-height: 40px;
+    font-size:16px;
+    display: block;
+    padding-left: 8px;
+}
+.sidebar-title>span[class^="icon-"]{
+    display: inline-block;
+    transition:all .2s
+}
+.sidebar-title:hover,.sidebar-title.match-href,.sidebar-content>li:hover,.sidebar-content>li.match-href{
+    background: var(--colorC);
+}
+.active .sidebar-title{
+    background: var(--colorD);
+    color:var(--colorE);
+}
+.active .sidebar-title>span.icon-ArrowLeft{
+    transform: rotate(90deg)
+}
+.sidebar-content{
+    transition: all .2s;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none
+}
+.sidebar-content>li{
+    padding-left: 38px;
+    height:40px;
+    line-height: 40px;
+    transition: all .2s;
+}
+.sidebar-content>li>a{
+    display: block;
+}

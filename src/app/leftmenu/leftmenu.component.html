@@ -1,0 +1,26 @@
+<div class="sidebar">
+    <div class="sidebar-nav" *ngFor="let menu of menus" myToggle [status]="menu.status" [disableclick]="menu.disableClick">
+        <a class="sidebar-title" mytoggleheader *ngIf="menu.href" href="{{menu.href||''}}" 
+            target="_blank" highLight highLightClass="match-href">
+            <span class="{{menu.icon}}"></span>
+            <span>{{menu.title}}</span>
+        </a>
+        <a class="sidebar-title" mytoggleheader *ngIf="menu.ruterLink" routerLink="{{menu.ruterLink}}" 
+            highLight highLightClass="match-href">
+            <span class="{{menu.icon}}"></span>
+            <span>{{menu.title}}</span>
+        </a>
+        <div class="sidebar-title" mytoggleheader *ngIf="!menu.href&&!menu.ruterLink" routerLink="{{menu.ruterLink}}" >
+            <span class="icon-ArrowLeft"></span>
+            <span>{{menu.title}}</span>
+        </div>
+        <ul class="sidebar-content" mytogglecontent>
+            <li *ngFor="let menu of menu.childs">
+                <a routerLink="{{menu.ruterLink}}" highLight highLightClass="match-href">
+                    <span></span>
+                    <span>{{menu.title}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

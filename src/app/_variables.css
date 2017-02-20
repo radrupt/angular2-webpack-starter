@@ -1,5 +1,16 @@
 :root{
-  --nav-button-color:black;
-  --blue: #056ef0;
-  --column:200px;
+    /*topbar高度*/
+    --topbarHeight:50px;
+    /*topbar背景色*/
+    --colorA:linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5)blue;
+    /*侧边栏宽度*/
+    --sidebarWidth:164px;
+    /*侧边栏文字默认颜色*/
+    --colorB:#2fa4e7;
+    /*侧边栏hover背景色*/
+    --colorC:rgba(128,128,128,0.13);
+    /*侧边栏展开title背景色*/
+    --colorD:#2fa4e7;
+    /*侧边栏展开title文字颜色*/
+    --colorE:white;
 }

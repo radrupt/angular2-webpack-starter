@@ -24,10 +24,14 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
+
+//component
 import { HomeComponent } from './home';
-import { AboutComponent } from './about';
-import { NoContentComponent } from './no-content';
-import { XLargeDirective } from './home/x-large';
+import { TestComponent } from './test';
+import { LeftmenuComponent } from './leftmenu';
+
+import { MyToggleDirective } from './leftmenu/mytoggle';
+import { HighLightDirective } from './leftmenu/highlight';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -47,11 +51,12 @@ type StoreType = {
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [
-    AppComponent,
-    AboutComponent,
-    HomeComponent,
-    NoContentComponent,
-    XLargeDirective
+    AppComponent
+    ,HomeComponent
+    ,TestComponent
+    ,LeftmenuComponent,
+    MyToggleDirective,
+    HighLightDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,

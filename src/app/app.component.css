@@ -3,27 +3,34 @@ html, body{
   height: 100%;
   font-family: Arial, Helvetica, sans-serif
 }
-h1 {
-  color: #00BCD4;
-  filter: invert(50%);
+body{padding:0;margin: 0}
+.viewFramework-topbar{
+  height:var(--topbarHeight);
+  width:100%;
+  background: var(--colorA);
+  position:fixed;
+  top:0;
+  left:0;
+  
 }
-a.active {
-  background-color: gray;
+.viewFramework-body{
+  position:fixed;
+  top:var(--topbarHeight);
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
 }
-
-nav {
-  margin-top: 16px;
+.viewFramework-sidebar{
+  width:var(--sidebarWidth);
+  min-width: var(--sidebarWidth);
 }
-
-nav a {
-  background-color: var(--nav-button-color);
-  display: flex;
-  color: white;
-  padding: 8px 16px;
-  margin: 8px;
-  vertical-align: middle;
-  line-height: 1.25;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 4px;
+.viewFramework-sidebar{
+  /*如果以后需要收缩侧边栏，扩展这个class*/
+}
+.viewFramework-product{
+  flex:1;
+  min-width: 50rem;
+  overflow: auto;
+  word-wrap: break-word;
 }

@@ -1,0 +1,48 @@
+[
+    {
+        "title": "href跳转",
+        "icon":  "icon-ArrowLeft",
+        "status": false,
+        "href": "http://localhost:3000/#/test",
+        "disableClick": true,
+        "childs": []
+    },
+    {
+        "title": "menu2",
+        "icon":  "icon-ArrowLeft",
+        "status": false,
+        "childs": [
+            {
+                "title": "2级uiroute跳转",
+                "ruterLink": "home"
+            },
+            {
+                "title": "menu2-2",
+                "ruterLink": "home"
+            }
+        ]
+    },
+    {
+        "title": "menu3",
+        "icon":  "icon-ArrowLeft",
+        "status": true,
+        "childs": [
+            {
+                "title": "menu3-1",
+                "ruterLink": "home"
+            },
+            {
+                "title": "menu3-2",
+                "ruterLink": "home"
+            }
+        ]
+    },
+    {
+        "title": "一级uiroute跳转",
+        "icon":  "icon-ArrowLeft",
+        "status": false,
+        "ruterLink": "test",
+        "disableClick": true,
+        "childs": []
+    }
+]
