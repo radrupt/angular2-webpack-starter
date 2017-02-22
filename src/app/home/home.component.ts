@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   // Set our default values
   public localState = { value: '' };
   public data:number;
+  public index:number = 1;
   // TypeScript public modifiers
   constructor(
     public appState: AppState,

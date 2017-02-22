@@ -31,7 +31,7 @@ import { TestComponent } from './test';
 import { LeftmenuComponent } from './leftmenu';
 
 import { MyToggleDirective } from './leftmenu/mytoggle';
-import { HighLightDirective } from './leftmenu/highlight';
+import { MyHighLightDirective } from './leftmenu/myhighlight';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -56,7 +56,7 @@ type StoreType = {
     ,TestComponent
     ,LeftmenuComponent,
     MyToggleDirective,
-    HighLightDirective
+    MyHighLightDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,

@@ -3,7 +3,7 @@
         "title": "href跳转",
         "icon": "icon-ArrowLeft",
         "status": false,
-        "href": "http://localhost:3000/test",
+        "href": "http://baidu.com",
         "disableClick": true,
         "childs": []
     },

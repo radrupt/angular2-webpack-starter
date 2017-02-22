@@ -10,7 +10,7 @@ export class MenudataService {
     ) { }
 
     public getData() {
-        return this.http.get('/assets/menudata.json').map(res => res.json());
+        return this.http.get('assets/menudata.json').map(res => res.json());
     }
 
 

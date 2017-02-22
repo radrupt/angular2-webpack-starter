@@ -5,7 +5,7 @@ import {
 
 import { MenudataService } from './menudata';
 import { MyToggleDirective } from './mytoggle';
-import { HighLightDirective } from './highlight';
+import { MyHighLightDirective } from './myhighlight';
 
 @Component({
   selector: 'leftmenu',

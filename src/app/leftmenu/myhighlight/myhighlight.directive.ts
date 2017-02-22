@@ -13,9 +13,9 @@ import {
  * Directive
  */
 @Directive({
-  selector: '[highLight]' // using [ ] means selecting attributes
+  selector: '[myHighLight]' // using [ ] means selecting attributes
 })
-export class HighLightDirective implements OnInit,AfterViewChecked{
+export class MyHighLightDirective implements OnInit,AfterViewChecked{
 
   @Input() highLightClass: string = '';//dom高亮使用到的class
   @Input() highLightHref: string = '';//匹配到该href则应用highLightClass
@@ -31,7 +31,7 @@ export class HighLightDirective implements OnInit,AfterViewChecked{
   }
  
   public ngAfterViewChecked(){//组件及子组件渲染结束执行
-    if(location.href.search(this.element.nativeElement.href)>=0){
+    if(location.href == this.element.nativeElement.href){
       this.renderer.setElementClass(this.element.nativeElement,this.highLightClass,true);
     }else{
       this.renderer.setElementClass(this.element.nativeElement,this.highLightClass,false);
