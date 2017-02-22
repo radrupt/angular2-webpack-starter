@@ -3,7 +3,7 @@
         "title": "href跳转",
         "icon": "icon-ArrowLeft",
         "status": false,
-        "href": "http://baidu.com",
+        "href": "https://radrupt.com",
         "disableClick": true,
         "childs": []
     },
